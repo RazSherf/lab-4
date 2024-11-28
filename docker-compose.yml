@@ -1,0 +1,49 @@
+version: '3.7'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - micro_service_network
+    volumes:
+      - mongo-data:/data/db
+
+  user_service:
+    build: ./user_service
+    container_name: user_service
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    networks:
+      - micro_service_network
+
+  product_service:
+    build: ./product_service
+    container_name: product_service
+    ports:
+      - "5001:5000"  # Expose product_service on port 5001
+    depends_on:
+      - mongo
+    networks:
+      - micro_service_network
+
+  order_service:
+    build: ./order_service
+    container_name: order_service
+    ports:
+      - "5002:5000"  # Expose order_service on port 5002
+    depends_on:
+      - mongo
+    networks:
+      - micro_service_network
+
+networks:
+  micro_service_network:
+    driver: bridge
+
+volumes:
+  mongo-data:
