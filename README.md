@@ -21,3 +21,7 @@ After testing everything, a cleanup script was created to remove all Kubernetes 
 ### Screenshots From The VM
 
 ![Dockerized Services](screenshots/user_add.png)
+
+![Dockerized Services](screenshots/product_add.png)
+
+![Dockerized Services](screenshots/order_add.png)
