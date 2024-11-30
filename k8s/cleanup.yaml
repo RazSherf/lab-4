@@ -1,0 +1,51 @@
+# Delete User Service Deployment and Service
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service
+
+# Delete Product Service Deployment and Service
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-service
+
+# Delete Order Service Deployment and Service
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: order-service
+
+# Delete MongoDB Deployment, Service, and PVC
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongo-pvc

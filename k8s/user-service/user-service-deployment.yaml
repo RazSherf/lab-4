@@ -31,6 +31,7 @@ spec:
   selector:
     app: user-service
   ports:
-    - port: 5000
-      targetPort: 5000
-  type: ClusterIP
+    - port: 5000       # Service port
+      targetPort: 5000 # Container port
+      nodePort: 30001  # Specific NodePort (optional, Kubernetes will assign one if omitted)
+  type: NodePort
