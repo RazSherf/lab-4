@@ -20,3 +20,4 @@ After testing everything, a cleanup script was created to remove all Kubernetes 
 
 ## Folder Structure
 
+├── user-service/ │ ├── Dockerfile │ └── app.py ├── product-service/ │ ├── Dockerfile │ └── app.py ├── order-service/ │ ├── Dockerfile │ └── app.py ├── mongo/ │ ├── docker-compose.yml │ └── mongo-data/ ├── k8s/ │ ├── deployment.yaml │ └── service.yaml └── cleanup.yaml
