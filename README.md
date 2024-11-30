@@ -1,13 +1,22 @@
-Microservices Project - Docker & Kubernetes
-Project Overview
+# Microservices Project - Docker & Kubernetes
+
+## Project Overview
 
 This project involves creating and deploying a set of microservices in two stages:
 
-    Dockerized Microservices:
-        Each service (User, Product, Order) was created in separate folders, containerized with Docker, and tested using Docker Compose.
+### 1. Dockerized Microservices
 
-    Kubernetes Deployment:
-        The services were then re-deployed using Kubernetes with NodePort services for external access, replacing the initial Docker Compose setup.
+Each service (User, Product, Order) was created in separate folders, containerized with Docker, and tested using Docker Compose.
 
-    Cleanup:
-        After testing everything, a cleanup script was created to remove all Kubernetes resources (Deployments, Services, PVC).
+### 2. Kubernetes Deployment
+
+The services were then re-deployed using Kubernetes with **NodePort** services for external access, replacing the initial Docker Compose setup.
+
+### 3. Cleanup
+
+After testing everything, a cleanup script was created to remove all Kubernetes resources (Deployments, Services, PVC).
+
+---
+
+## Folder Structure
+
