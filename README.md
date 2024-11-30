@@ -24,7 +24,7 @@ After testing everything, a cleanup script was created to remove all Kubernetes 
 
 ![Dockerized Services](screenshots/product_add.png)
 
-![Dockerized Services](screenshots/order_add_add.png)
+![Dockerized Services](screenshots/order_add.png)
 
 
 
