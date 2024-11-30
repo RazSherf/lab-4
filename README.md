@@ -16,6 +16,8 @@ The services were then re-deployed using Kubernetes with **NodePort** services f
 
 After testing everything, a cleanup script was created to remove all Kubernetes resources (Deployments, Services, PVC).
 
+To run the command : kubectl delete -f cleanup.yaml inside the k8s folder 
+
 ---
 
 ### Screenshots From The VM
