@@ -17,4 +17,4 @@ The services were then re-deployed using Kubernetes with **NodePort** services f
 After testing everything, a cleanup script was created to remove all Kubernetes resources (Deployments, Services, PVC).
 
 ---
-
+![Dockerized Services](screenshots/user_add.png)
