@@ -1,3 +1,6 @@
 flask
 pymongo
 requests
+prometheus_flask_exporter
+Flask==2.2.5
+prometheus_flask_exporter==0.22.4

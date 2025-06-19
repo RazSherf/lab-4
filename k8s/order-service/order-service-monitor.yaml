@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: order-service-monitor
+  namespace: monitoring
+  labels:
+    release: prometheus  # Make sure this matches your Prometheus operator's selector
+spec:
+  selector:
+    matchLabels:
+      app: order-service
+  namespaceSelector:
+    matchNames:
+      - default  # Change this to the namespace where your app is deployed
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
